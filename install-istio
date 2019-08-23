@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+# create istio crd
+for i in istio-system/istio-init-crd/crd*yaml; do kubectl apply -f $i; done
+
+# install istio
+kubectl apply -f istio-system/istio-demo-auth.yaml
+
+# default namespace支持自动注入sidecar
+kubectl label namespace default istio-injection=enabled

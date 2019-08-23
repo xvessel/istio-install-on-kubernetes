@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+./docker-pull grafana/grafana:6.1.6
+./docker-pull docker.io/istio/citadel:1.2.2
+./docker-pull docker.io/istio/proxyv2:1.2.2
+./docker-pull docker.io/istio/galley:1.2.2
+./docker-pull docker.io/istio/pilot:1.2.2
+./docker-pull docker.io/istio/mixer:1.2.2
+./docker-pull docker.io/istio/sidecar_injector:1.2.2
+
+./docker-pull docker.io/jaegertracing/all-in-one:1.9
+./docker-pull quay.io/kiali/kiali:v0.20
+./docker-pull docker.io/prom/prometheus:v2.8.0
+./docker-pull docker.io/openzipkin/zipkin:2.13.0
